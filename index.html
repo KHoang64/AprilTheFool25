@@ -17,7 +17,6 @@
             padding: 0;
             display: flex;
             flex-direction: row;
-            position: relative;
         }
 
         .sidebar {
@@ -54,6 +53,20 @@
             flex: 1;
             padding: 40px;
             max-width: 900px;
+            z-index: 1;
+        }
+
+        .radio-panel {
+            width: 340px;
+            margin-top: 400px;
+            margin-left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            height: 680px;
+            position: fixed;
+            right: 270px;
             z-index: 1;
         }
 
@@ -119,14 +132,6 @@
             display: inline-block;
         }
 
-        .murakami-bg {
-            background-image: url('murakami_flower.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            padding: 20px;
-            border-radius: 10px;
-        }
-
         .toc {
             list-style: none;
             padding: 0;
@@ -159,16 +164,6 @@
         <p class="tagline">that one day out of the 365 to view this page</p>
         <iframe src="https://days.to/until/2-april" width="150%" height="500" frameborder="0"></iframe>
 
-        <style>
-            body {
-                background-image: url("murakami.jpg");
-                background-repeat: no-repeat;
-                background-size: auto;
-                background-position: center;
-                background-attachment: fixed;
-            }
-        </style>
-
         <div class="tokyo-style-heading" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
             <div style="display: flex; gap: 5px;"><span>S</span><span>A</span><span>Y</span></div>
             <div style="display: flex; gap: 5px;"><span>H</span><span>I</span></div>
@@ -180,7 +175,6 @@
             </div>
         </div>
 
-
         <script src="https://giscus.app/client.js" data-repo="KHoang64/AprilTheFool25" data-repo-id="R_kgDOOR-chA"
             data-category="General" data-category-id="DIC_kwDOOR-chM4CoqUP" data-mapping="pathname" data-strict="0"
             data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom"
@@ -190,10 +184,10 @@
         <h2>Collection 1</h2>
         <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc897680c7ab57fbd64dedbcb0" width="100%"
             height="600" frameborder="0" allowfullscreen></iframe>
+
         <h2>Collection 2</h2>
         <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc8976802092b9db88f6e09ccb" width="100%"
             height="600" frameborder="0" allowfullscreen></iframe>
-
 
         <div class="about-section">
             <h2>About this Page :</h2>
@@ -204,13 +198,15 @@
                 do not have half their other eye, or the eyes look oddly mirrored. Oop.</p>
             <p>I kinda came up with this idea pretty last minute… making a website and such. So it's pretty hard to get
                 my thoughts and organize in a timely manner the day before or of today, also and I plan to unlist this
-                website
-                after a day of viewing expiration.</p>
+                website after a day of viewing expiration.</p>
             <p>Maybe there will be one next year when I further my web development</p>
         </div>
     </div>
 
-
+    <div class="radio-panel">
+        <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc8976805ebd51e8bc7bc7d1e9" width="100%"
+            height="640" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <div class="sidebar" id="sidebar">
         <h3>Table of Contents</h3>
