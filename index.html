@@ -57,7 +57,7 @@
         }
 
         .radio-panel {
-            width: 340px;
+            width: 420px;
             margin-top: 400px;
             margin-left: 20px;
             background: rgba(255, 255, 255, 0.9);
@@ -153,6 +153,14 @@
             line-height: 1.6;
             padding-bottom: 100px;
         }
+
+        body {
+            background-image: url("murakami.jpg");
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            background-position: top right;
+            background-attachment: fixed;
+        }
     </style>
 </head>
 
@@ -160,7 +168,7 @@
     <button class="toggle-arrow" onclick="toggleSidebar()">➤</button>
 
     <div class="content">
-        <h1 class="logo">April 1st</h1>
+        <h1 class="logo" id="top">April 1st</h1>
         <p class="tagline">that one day out of the 365 to view this page</p>
         <iframe src="https://days.to/until/2-april" width="150%" height="500" frameborder="0"></iframe>
 
@@ -181,15 +189,15 @@
             data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async>
             </script>
 
-        <h2>Collection 1</h2>
+        <h2 id="collection1">Collection 1</h2>
         <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc897680c7ab57fbd64dedbcb0" width="100%"
             height="600" frameborder="0" allowfullscreen></iframe>
 
-        <h2>Collection 2</h2>
+        <h2 id="collection2">Collection 2</h2>
         <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc8976802092b9db88f6e09ccb" width="100%"
             height="600" frameborder="0" allowfullscreen></iframe>
 
-        <div class="about-section">
+        <div class="about-section" id="subcollection2">
             <h2>About this Page :</h2>
             <p>Yooo gonna brushing off some radio silence.</p>
             <p>Also try doing something I just thought of on a gimmick day like April 1st would be a day to look back at
@@ -220,7 +228,10 @@
 
     <script>
         function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         function toggleSidebar() {
