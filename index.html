@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POP UP OPEN 1 DAY ONLY</title>
+    <title></title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
         body {
             font-family: 'Times New Roman', serif;
             background-color: #f8e8c8;
@@ -26,6 +29,23 @@
             top: 0;
             bottom: 0;
             overflow-y: auto;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.collapsed {
+            transform: translateX(100%);
+        }
+
+        .toggle-arrow {
+            position: fixed;
+            right: 260px;
+            top: 20px;
+            background-color: #f8e8c8;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000;
         }
 
         .content {
@@ -34,9 +54,25 @@
             max-width: 900px;
         }
 
-        h1 {
-            font-size: 28px;
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 64px;
+            font-weight: bold;
             text-align: center;
+            position: relative;
+            margin: 0;
+            padding: 20px 0;
+        }
+
+        .logo::after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 1px;
+            background-color: #333;
         }
 
         .tagline {
@@ -44,6 +80,40 @@
             text-align: center;
             margin-bottom: 20px;
             color: #8a6e50;
+        }
+
+        .tokyo-style-heading {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+            gap: 15px 30px;
+        }
+
+        .tokyo-style-heading span {
+            background: #34b233;
+            color: yellow;
+            font-weight: bold;
+            font-size: 40px;
+            padding: 10px 15px;
+            transform: rotate(-5deg);
+            display: inline-block;
+            box-shadow: 2px 2px 0 #222;
+            font-family: Arial Black, sans-serif;
+        }
+
+        h2,
+        h3 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 40px;
+            font-weight: normal;
+            color: #333;
+            background-color: #fefefe;
+            padding: 10px 20px;
+            border-left: 6px solid #444;
+            margin-top: 50px;
+            box-shadow: 4px 4px 0 #bbb;
+            display: inline-block;
         }
 
         .murakami-bg {
@@ -72,12 +142,35 @@
 </head>
 
 <body>
-    <div class="content">
-        <h1>POP UP OPEN 1 DAY ONLY</h1>
-        <p class="tagline">the one day out of the 365: sTATUS: STILLW.I.P</p>
-        <iframe src="https://days.to/until/2-april" width="300%" height="500" frameborder="0"></iframe>
+    <button class="toggle-arrow" onclick="toggleSidebar()">➤</button>
 
-        <h2> say hi if ya want babez |˶˙ᵕ˙ )ﾉﾞ 💙</h2>
+    <div class="content">
+        <h1 class="logo">April the Fool</h1>
+        <p class="tagline">that one day out of the 365</p>
+        <iframe src="https://days.to/until/2-april" width="100%" height="100" frameborder="0"></iframe>
+
+        <div class="tokyo-style-heading">
+            <span>S</span>
+            <span>A</span>
+            <span>Y</span>
+            <span>H</span>
+            <span>I</span>
+            <span>I</span>
+            <span>F</span>
+            <span>Y</span>
+            <span>A</span>
+            <span></span>
+            <span>W</span>
+            <span>A</span>
+            <span>N</span>
+            <span>T</span>
+            <span>B</span>
+            <span>A</span>
+            <span>B</span>
+            <span>E</span>
+            <span>Z</span>
+            <span>💙</span>
+        </div>
 
         <script src="https://giscus.app/client.js" data-repo="KHoang64/AprilTheFool25" data-repo-id="R_kgDOOR-chA"
             data-category="General" data-category-id="DIC_kwDOOR-chM4CoqUP" data-mapping="pathname" data-strict="0"
@@ -98,7 +191,7 @@
             height="600" frameborder="0" allowfullscreen></iframe>
     </div>
 
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h3>Table of Contents</h3>
         <ul class="toc">
             <li onclick="scrollToSection('top')">Top</li>
@@ -111,6 +204,13 @@
     <script>
         function scrollToSection(id) {
             document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const toggleBtn = document.querySelector('.toggle-arrow');
+            sidebar.classList.toggle('collapsed');
+            toggleBtn.textContent = sidebar.classList.contains('collapsed') ? '◀' : '➤';
         }
     </script>
 </body>
