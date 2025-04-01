@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viewing the page expires in one day</title>
+    <title>Pop up gallery</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
@@ -94,8 +94,8 @@
         }
 
         .tokyo-style-heading span {
-            background: #34b233;
-            color: yellow;
+            background: #2d97cc;
+            color: rgb(255, 221, 0);
             font-weight: bold;
             font-size: 40px;
             padding: 10px 15px;
@@ -159,28 +159,27 @@
         <p class="tagline">that one day out of the 365 to view this page</p>
         <iframe src="https://days.to/until/2-april" width="150%" height="500" frameborder="0"></iframe>
 
-        <div class="tokyo-style-heading">
-            <span>S</span>
-            <span>A</span>
-            <span>Y</span>
-            <span>H</span>
-            <span>I</span>
-            <span>I</span>
-            <span>F</span>
-            <span>Y</span>
-            <span>A</span>
-            <span></span>
-            <span>W</span>
-            <span>A</span>
-            <span>N</span>
-            <span>T</span>
-            <span>B</span>
-            <span>A</span>
-            <span>B</span>
-            <span>E</span>
-            <span>Z</span>
-            <span>💙</span>
+        <style>
+            body {
+                background-image: url("murakami.jpg");
+                background-repeat: no-repeat;
+                background-size: auto;
+                background-position: center;
+                background-attachment: fixed;
+            }
+        </style>
+
+        <div class="tokyo-style-heading" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+            <div style="display: flex; gap: 5px;"><span>S</span><span>A</span><span>Y</span></div>
+            <div style="display: flex; gap: 5px;"><span>H</span><span>I</span></div>
+            <div style="display: flex; gap: 5px;"><span>I</span><span>F</span></div>
+            <div style="display: flex; gap: 5px;"><span>Y</span><span>A</span></div>
+            <div style="display: flex; gap: 5px;"><span>W</span><span>A</span><span>N</span><span>T</span></div>
+            <div style="display: flex; gap: 5px;">
+                <span>B</span><span>A</span><span>B</span><span>E</span><span>Z</span><span>💙</span>
+            </div>
         </div>
+
 
         <script src="https://giscus.app/client.js" data-repo="KHoang64/AprilTheFool25" data-repo-id="R_kgDOOR-chA"
             data-category="General" data-category-id="DIC_kwDOOR-chM4CoqUP" data-mapping="pathname" data-strict="0"
@@ -189,16 +188,12 @@
             </script>
 
         <h2>Collection 1</h2>
-        <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc89768023a02cf354f4bc7a8c" width="100%"
-            height="600" frameborder="0" allowfullscreen></iframe>
-
-        <h2>Collection 2</h2>
         <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc897680c7ab57fbd64dedbcb0" width="100%"
             height="600" frameborder="0" allowfullscreen></iframe>
-
-        <h3>Sub Collection 2</h3>
+        <h2>Collection 2</h2>
         <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc8976802092b9db88f6e09ccb" width="100%"
             height="600" frameborder="0" allowfullscreen></iframe>
+
 
         <div class="about-section">
             <h2>About this Page :</h2>
@@ -214,6 +209,8 @@
             <p>Maybe there will be one next year when I further my web development</p>
         </div>
     </div>
+
+
 
     <div class="sidebar" id="sidebar">
         <h3>Table of Contents</h3>
