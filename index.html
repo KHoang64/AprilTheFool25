@@ -9,6 +9,54 @@
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 20px;
+                max-width: 100%;
+            }
+
+            .sidebar {
+                width: 100%;
+                position: relative;
+                right: unset;
+                top: unset;
+                height: auto;
+                box-shadow: none;
+                background: transparent;
+                padding: 0;
+            }
+
+            .toggle-arrow {
+                display: none;
+            }
+
+            .radio-panel {
+                width: 100%;
+                margin-top: 20px;
+                height: 500px;
+            }
+
+            .framed-image {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .tokyo-style-heading span {
+                font-size: 28px;
+                padding: 6px 10px;
+            }
+
+            h2,
+            h3 {
+                font-size: 28px;
+                padding: 6px 12px;
+            }
+        }
+
         body {
             font-family: 'Times New Roman', serif;
             background-color: #f8e8c8;
@@ -20,7 +68,7 @@
         }
 
         .sidebar {
-            width: 250px;
+            width: 450px;
             padding: 20px;
             background: rgba(255, 255, 255, 0.8);
             box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -31,6 +79,9 @@
             overflow-y: auto;
             transition: transform 0.3s ease-in-out;
             z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
         }
 
         .sidebar.collapsed {
@@ -39,7 +90,7 @@
 
         .toggle-arrow {
             position: fixed;
-            right: 260px;
+            right: 460px;
             top: 20px;
             background-color: #f8e8c8;
             border: 1px solid #ccc;
@@ -53,20 +104,6 @@
             flex: 1;
             padding: 40px;
             max-width: 900px;
-            z-index: 1;
-        }
-
-        .radio-panel {
-            width: 420px;
-            margin-top: 400px;
-            margin-left: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            padding: 10px;
-            height: 680px;
-            position: fixed;
-            right: 270px;
             z-index: 1;
         }
 
@@ -89,6 +126,15 @@
             width: 80px;
             height: 1px;
             background-color: #333;
+        }
+
+        .framed-image {
+            display: block;
+            margin: 20px auto;
+            border: 12px solid #fff5e1;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25), inset 0 0 0 5px #8b6f47;
+            max-width: 90%;
+            height: auto;
         }
 
         .tagline {
@@ -135,6 +181,7 @@
         .toc {
             list-style: none;
             padding: 0;
+            margin-bottom: 30px;
         }
 
         .toc li {
@@ -154,6 +201,16 @@
             padding-bottom: 100px;
         }
 
+        .radio-panel {
+            width: 100%;
+            height: 740px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
         body {
             background-image: url("murakami.jpg");
             background-repeat: no-repeat;
@@ -168,12 +225,13 @@
     <button class="toggle-arrow" onclick="toggleSidebar()">➤</button>
 
     <div class="content">
-        <h1 class="logo" id="top">April 1st</h1>
+        <h1 class="logo" id="top">April 1st Lookback </h1>
+
+        <img src="lookback.png" alt="Lookback Illustration" class="framed-image">
+
         <p class="tagline">that one day out of the 365 to view this page.</p>
-        <p class="tagline">best Viewed on desktop / laptop.</p>
-        <iframe src="https://days.to/until/2-april" width="150%" height="500" frameborder="0"></iframe>
         <p class="tagline">🕯️ .</p>
-        <p class="tagline"> this website will be unavailable once the timer countsdown .</p>
+        <p class="tagline">only works on desktop / laptop 💀 </p>
         <p class="tagline">💝 .</p>
 
         <div class="tokyo-style-heading" style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
@@ -203,21 +261,21 @@
 
         <div class="about-section" id="subcollection2">
             <h2>About this Page :</h2>
-            <p>Yooo gonna brushing off some radio silence.</p>
-            <p>Also try doing something I just thought of on a gimmick day like April 1st would be a day to look back at
-                old works I never really tried to publish (these collections are from 2021 to 2024) — works that I
+            <p>Yooo hey gotta brush off some radio silence.</p>
+            <p>Also trying out an idea I just thought of in the spir of the moment wheree on a gimmick day like April
+                1st could reserve it for a day to look back at
+                old works maybe forgotten or just in unfinished state (this collection will be from 2021 to 2024) —
+                works that I
                 thought I just feel the need to share even if it's unfinished. That’s likely why a good amount of them
-                do not have half their other eye, or the eyes look oddly mirrored. Oop.</p>
+                do not have half their other eye, or the eyes look oddly mirrored uhhhh yea oop.</p>
             <p>I kinda came up with this idea pretty last minute… making a website and such. So it's pretty hard to get
-                my thoughts and organize in a timely manner the day before or of today, also and I plan to unlist this
-                website after a day of viewing expiration.</p>
-            <p>Maybe there will be one next year when I further my web development</p>
+                my thoughts and organize in a timely manner the day before or of today, also and I had originally plan
+                to unlist this
+                website after a day of viewing expiration maybe it will be set as archived pointer linked to a new list
+                later</p>
+            <p>When further my web development I might make a lookback for that next year so theres also that to look
+                out for ^^</p>
         </div>
-    </div>
-
-    <div class="radio-panel">
-        <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc8976805ebd51e8bc7bc7d1e9" width="100%"
-            height="640" frameborder="0" allowfullscreen></iframe>
     </div>
 
     <div class="sidebar" id="sidebar">
@@ -228,6 +286,10 @@
             <li onclick="scrollToSection('collection2')">Collection 2</li>
             <li onclick="scrollToSection('subcollection2')">Sub Collection 2</li>
         </ul>
+        <div class="radio-panel">
+            <iframe src="https://bolder-astronaut-582.notion.site/ebd/1c8479bc8976805ebd51e8bc7bc7d1e9" width="100%"
+                height="720" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
     <script>
